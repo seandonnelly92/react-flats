@@ -1,5 +1,6 @@
 import React from 'react';
 import FlatList from './flat_list';
+// Import the ARRAY of flats from the flats.js json
 import flats from '../../data/flats';
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <div className="container">
       <div className="left-side">
         <FlatList
+        // Give FlatList the props that flats is an array of flats
           flats={flats}
         />
       </div>
