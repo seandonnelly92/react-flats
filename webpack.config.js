@@ -23,7 +23,16 @@ module.exports = {
       {
         test: /\.s?css$/,
         exclude: /node_modules/,
-        loaders: [ 'style-loader', 'css-loader', 'sass-loader' ]
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: require('sass') // Ensure we're using `sass` (dart-sass)
+            }
+          }
+        ]
       },
       {
         test: /\.html$/,
