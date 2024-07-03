@@ -1,9 +1,9 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
 
-const SelectedFlat = ({ text }) => <div>{text}</div>;
+const SelectedFlat = ({ text }) => <p className="marker">{text}</p>;
 
-const Map = () => {
+const Map = ({ selectedFlat }) => {
   const defaultProps = {
     center: {
       lat: 48.884211,
@@ -21,9 +21,9 @@ const Map = () => {
         defaultZoom={defaultProps.zoom}
       >
         <SelectedFlat
-          lat={50}
-          lng={100}
-          text="Pin!"
+          lat={selectedFlat.lat}
+          lng={selectedFlat.lng}
+          text={selectedFlat.name}
         />
       </GoogleMapReact>
     </div>
