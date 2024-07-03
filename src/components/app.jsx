@@ -2,6 +2,7 @@ import React from 'react';
 import FlatList from './flat_list';
 // Import the ARRAY of flats from the flats.js json
 import flats from '../../data/flats';
+import Map from './map';
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
         />
       </div>
       <div className="right-side">
-        <h1>right side</h1>
+        <Map />
       </div>
     </div>
   );
